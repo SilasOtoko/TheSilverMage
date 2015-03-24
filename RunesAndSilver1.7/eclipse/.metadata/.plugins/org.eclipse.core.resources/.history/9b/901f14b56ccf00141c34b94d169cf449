@@ -1,0 +1,11 @@
+package com.silasotoko.runesandsilver.item;
+
+import com.silasotoko.runesandsilver.RunesAndSilver;
+
+public class ItemDokuwoodBowl extends ItemRS {
+	public ItemDokuwoodBowl(){
+		super();
+		this.setCreativeTab(RunesAndSilver.tabRunesAndSilver);
+		this.setUnlocalizedName("DoruwoodBowl");
+	}
+}
