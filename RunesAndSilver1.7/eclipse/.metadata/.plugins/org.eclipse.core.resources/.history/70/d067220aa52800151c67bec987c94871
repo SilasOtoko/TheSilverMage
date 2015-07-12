@@ -1,0 +1,26 @@
+package com.silasotoko.runesandsilver.world;
+
+import java.util.Random;
+
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkProvider;
+import cpw.mods.fml.common.IWorldGenerator;
+
+public class RSWorldGen implements IWorldGenerator{
+	@Override
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
+		switch (world.provider.dimensionId){
+		case 0: //Overworld
+			break;
+		case -1: //Nether
+			break;
+		case 1: //End
+			break;
+		}
+	}
+	private WorldGenerator gen_tutorial_ore;
+	
+	public ModWorldGen(){
+		this.gen_tutorial_ore = new WorldGenMinable(ModBlocks.tutorial_ore, 8);
+	}
+}

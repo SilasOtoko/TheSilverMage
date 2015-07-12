@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="false" key="isRegEx"/>
-		<item value="rune" key="selection"/>
-		<item value="false" key="casesensitive"/>
-		<item value="false" key="incremental"/>
-		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
-		<list key="findhistory">
-			<item value="Rune"/>
-			<item value="Fire"/>
-			<item value="Earth"/>
-			<item value="Water"/>
-			<item value="Doro"/>
-			<item value="Doko"/>
-			<item value="Ember"/>
-			<item value="AdamantHelmet"/>
-		</list>
-		<list key="replacehistory">
-			<item value="Doru"/>
-			<item value="Embyr"/>
-			<item value="Nature"/>
-			<item value="Hydor"/>
-			<item value="DorowoodChestplate"/>
-			<item value="ModBlocks.RunewoodSapling"/>
-			<item value="ModBlocks.RunewoodLog"/>
-			<item value="ModBlocks.RunewoodLeaves"/>
-		</list>
-	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="331" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="413" key="DIALOG_Y_ORIGIN"/>
+		<item value="1231" key="DIALOG_X_ORIGIN"/>
 		<item value="486" key="DIALOG_HEIGHT"/>
-		<item value="261" key="DIALOG_Y_ORIGIN"/>
-		<item value="1223" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="SilverOre" key="selection"/>
+		<list key="findhistory">
+			<item value="silverore"/>
+			<item value="mithrilore"/>
+			<item value="mithril"/>
+			<item value="ModelForestWalker"/>
+			<item value="public class ModelSnowGolem {"/>
+			<item value="EntityForestWalker"/>
+			<item value="ModelIronGolem"/>
+			<item value="ModelNetherGolem"/>
+		</list>
+		<list key="replacehistory">
+			<item value="ModelRunestoneGolem"/>
+			<item value="EntityRunestoneGolem"/>
+			<item value="ModelForestWalker"/>
+			<item value="NetherGolem"/>
+			<item value="ModelSnowGolem"/>
+			<item value="RunestoneGolem"/>
+			<item value="EntitySnowGolem"/>
+			<item value="Doru"/>
+		</list>
 	</section>
 </section>

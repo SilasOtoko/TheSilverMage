@@ -33,7 +33,7 @@ public class BlockDoruwoodLog extends BlockLog {
 		
 		for (int i = 0; i < this.field_150167_a.length; i++){
 			this.field_150167_a[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_" + logs[i]);
-			this.field_150166_b[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + logs[i] + "_top");
+			this.field_150166_b[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_" + logs[i] + "_top");
 		}
 	}
 }

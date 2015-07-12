@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.silasotoko.runesandsilver.entities.EntityFireGolem&apos; to &apos;EntityNetherGolem&apos;&#x0D;&#x0A;- Original project: &apos;Minecraft&apos;&#x0D;&#x0A;- Original element: &apos;com.silasotoko.runesandsilver.entities.EntityFireGolem&apos;&#x0D;&#x0A;- Renamed element: &apos;com.silasotoko.runesandsilver.entities.EntityNetherGolem&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EntityFireGolem&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.silasotoko.runesandsilver.entities{EntityFireGolem.java[EntityFireGolem" matchStrategy="1" name="EntityNetherGolem" qualified="false" references="true" similarDeclarations="false" stamp="1428022463104" textual="false" version="1.0"/>
+</session>

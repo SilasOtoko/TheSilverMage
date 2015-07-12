@@ -2,9 +2,11 @@
 package com.silasotoko.runesandsilver;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -13,8 +15,13 @@ import com.silasotoko.runesandsilver.Init.ModItems;
 import com.silasotoko.runesandsilver.Reference.Reference;
 import com.silasotoko.runesandsilver.configuration.ConfigurationHandler;
 import com.silasotoko.runesandsilver.entities.EntityCreeperHeart;
+import com.silasotoko.runesandsilver.entities.EntityForestWalker;
+import com.silasotoko.runesandsilver.entities.EntityNetherGolem;
+import com.silasotoko.runesandsilver.entities.EntityRunestoneGolem;
+import com.silasotoko.runesandsilver.entities.EntitySnowGolem;
 import com.silasotoko.runesandsilver.proxy.CommonProxy;
 import com.silasotoko.runesandsilver.proxy.IProxy;
+import com.silasotoko.runesandsilver.world.RSWorldGen;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -23,6 +30,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
 public class RunesAndSilver {
@@ -60,12 +68,25 @@ public class RunesAndSilver {
 		proxy.registerRenderers();
 		
 		EntityRegistry.registerModEntity(EntityCreeperHeart.class, "CreeperCore", ++modEntityIndex, this, 64, 10, true);
+		EntityRegistry.registerModEntity(EntityForestWalker.class, "ForestWalker", ++modEntityIndex, this, 80, 3, false);
+		EntityRegistry.registerModEntity(EntitySnowGolem.class, "Snow Golem", ++modEntityIndex, this, 80, 3, false);
+		EntityRegistry.registerModEntity(EntityRunestoneGolem.class, "Runestone Golem", ++modEntityIndex, this, 80, 3, false);
+		EntityRegistry.registerModEntity(EntityNetherGolem.class, "Nether Golem", ++modEntityIndex, this, 80, 3, false);
+		
+		EntityRegistry.addSpawn(EntityForestWalker.class, 5, 1, 5, EnumCreatureType.monster, 
+			      BiomeGenBase.forest); //change the values to vary the spawn rarity, biome, etc.
+		EntityRegistry.addSpawn(EntitySnowGolem.class, 5, 1, 5, EnumCreatureType.monster, 
+			      BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.iceMountains, BiomeGenBase.icePlains); //change the values to vary the spawn rarity, biome, etc.
+		EntityRegistry.addSpawn(EntityRunestoneGolem.class, 5, 1, 5, EnumCreatureType.monster, 
+			      null); //change the values to vary the spawn rarity, biome, etc.
+		EntityRegistry.addSpawn(EntityNetherGolem.class, 5, 1, 5, EnumCreatureType.monster, 
+			      BiomeGenBase.hell); //change the values to vary the spawn rarity, biome, etc.
 		
 	}
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){
-	
+		GameRegistry.registerWorldGenerator(new RSWorldGen(), 0);
 		
 	}
 	

@@ -20,7 +20,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockAdamantOre extends BlockRS{
-	protected IIcon blockIcon;
 	
     public BlockAdamantOre(Material material)
     {
@@ -50,11 +49,6 @@ public class BlockAdamantOre extends BlockRS{
     {
         return 1 + rand.nextInt(1);
     }
-    
-    @SideOnly(Side.CLIENT)
-    public IIcon registerIcons(IIconRegister reg) { // Make sure to import IconRegister!
-			return blockIcon = reg.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5));
-		 }
 
 public void dropBlockAsItemWithChance (World world, int par2, int par3, int par4, int par5, float par6, int par7) 
 {

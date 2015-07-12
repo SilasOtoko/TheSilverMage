@@ -6,7 +6,7 @@ public class ItemMithrilOre extends ItemRS {
 	public ItemMithrilOre(){
 		super();
 		this.setCreativeTab(RunesAndSilver.tabRunesAndSilver);
-		this.setUnlocalizedName("MithrilOre");
+		this.setUnlocalizedName("MithrilClump");
 	}
 	
 }

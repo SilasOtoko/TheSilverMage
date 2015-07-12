@@ -114,7 +114,7 @@ public class BlockRedFire extends BlockFire{
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_layer_0"), p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_layer_1")};
+        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_0"), p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_1")};
     }
 
     @SideOnly(Side.CLIENT)

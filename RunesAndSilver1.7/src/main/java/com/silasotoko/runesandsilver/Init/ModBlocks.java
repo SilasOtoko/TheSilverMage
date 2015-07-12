@@ -6,8 +6,14 @@ import net.minecraft.init.Blocks;
 
 import com.silasotoko.runesandsilver.RunesAndSilver;
 import com.silasotoko.runesandsilver.blocks.BlockAdamantOre;
+import com.silasotoko.runesandsilver.blocks.BlockAeirOre;
 import com.silasotoko.runesandsilver.blocks.BlockBlueFire;
+import com.silasotoko.runesandsilver.blocks.BlockEmberOre;
+import com.silasotoko.runesandsilver.blocks.BlockForestWalkerSapling;
 import com.silasotoko.runesandsilver.blocks.BlockGreenFire;
+import com.silasotoko.runesandsilver.blocks.BlockHydorOre;
+import com.silasotoko.runesandsilver.blocks.BlockMithrilOre;
+import com.silasotoko.runesandsilver.blocks.BlockNatureOre;
 import com.silasotoko.runesandsilver.blocks.BlockPinkFire;
 import com.silasotoko.runesandsilver.blocks.BlockPurpleFire;
 import com.silasotoko.runesandsilver.blocks.BlockRS;
@@ -15,6 +21,7 @@ import com.silasotoko.runesandsilver.blocks.BlockRedFire;
 import com.silasotoko.runesandsilver.blocks.BlockDoruwoodLeaves;
 import com.silasotoko.runesandsilver.blocks.BlockDoruwoodLog;
 import com.silasotoko.runesandsilver.blocks.BlockDoruwoodSapling;
+import com.silasotoko.runesandsilver.blocks.BlockSilverOre;
 import com.silasotoko.runesandsilver.item.ItemLeafBlocks;
 import com.silasotoko.runesandsilver.item.ItemLogBlock;
 import com.silasotoko.runesandsilver.item.ItemSaplingBlock;
@@ -23,7 +30,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks extends Blocks{
 	public static final Block DoruwoodSapling = new BlockDoruwoodSapling();
-	public static final Block DoruwoodLog = new BlockDoruwoodLog().setCreativeTab(RunesAndSilver.tabRunesAndSilver).setBlockName("Doruwood");
+	public static final Block DoruwoodLog = new BlockDoruwoodLog().setCreativeTab(RunesAndSilver.tabRunesAndSilver).setBlockName("log");
 	public static final Block DoruwoodLeaves = new BlockDoruwoodLeaves().setBlockName("leaves").setCreativeTab(RunesAndSilver.tabRunesAndSilver);
 	public static final Block Fire_Blue = new BlockBlueFire(Material.fire).setBlockName("FireBlue");
 	public static final Block Fire_Red = new BlockRedFire(Material.fire).setBlockName("FireRed");
@@ -31,20 +38,25 @@ public class ModBlocks extends Blocks{
 	public static final Block Fire_Pink = new BlockPinkFire(Material.fire).setBlockName("FirePink");
 	public static final Block Fire_Purple = new BlockPurpleFire(Material.fire).setBlockName("FirePurple");
 	public static final BlockRS OreAdamant = new BlockAdamantOre(Material.rock);
+	public static final Block ForestWalkerSapling = new BlockForestWalkerSapling();
+	public static final Block OreNature = new BlockNatureOre(Material.rock).setBlockName("EarthOre");
+	public static final Block OreEmber = new BlockEmberOre(Material.rock).setBlockName("FireOre");
+	public static final Block OreAeir = new BlockAeirOre(Material.rock).setBlockName("AirOre");
+	public static final Block OreHydor = new BlockHydorOre(Material.rock).setBlockName("WaterOre");
+	public static final Block OreMithril = new BlockMithrilOre(Material.rock).setBlockName("MithrilOre");
+	public static final Block OreSilver = new BlockSilverOre(Material.rock).setBlockName("SilverOre");
+	
 	/*
 	public static final Block CreeperCharge = new BlockCreeperCharge().setBlockName("CreeperCharge");
 	public static final Block Fire_Silver = new BlockSilverFire().setBlockName("FireSilver");
 	public static final Block SilverBlock = new BlockSilverBlock().setBlockName("SilverBlock");
-	public static final Block OreNature = new BlockNatureOre().setBlockName("EarthOre");
-	public static final Block OreEmber = new BlockEmberOre().setBlockName("FireOre");
-	public static final Block OreAerie = new BlockAerieOre().setBlockName("AirOre");
-	public static final Block OreHydor = new BlockHyDorure().setBlockName("WaterOre");
+	
 	public static final Block NightShade = new BlockNightShade().setBlockName("NightShade");
 	public static final Block DoruWoodCore = new BlockDoruWoodCore().setBlockName("ForestTreeCore");
 	public static final Block ForestWalkerSapling = new BlockForestWalkerSapling().setBlockName("ForestWalkerSapling");
 	public static final Block GlowFlower = new BlockGlowFlower().setBlockName("GlowFlower");
 	public static final Block LuminShroom = new BlockLuminShroom.setBlockName("LuminShroom");
-	public static final Block OreMithril = new BlockMithrilOre().setBlockName("MithrilOre");
+	
 	public static final Block FlowerPinkLily = new BlockPinkLily().setBlockName("PinkLily");
 	public static final Block RunewoodDoor = new BlockRunewoodDoor().setBlockName("RunewoodDoor");
 	public static final Block RunewoodChiseled = new BlockChiseledRunewood().setBlockName("ChiseledRunewood");
@@ -64,6 +76,12 @@ public static void init(){
 	GameRegistry.registerBlock(Fire_Green, "Green Fire");
 	GameRegistry.registerBlock(Fire_Pink, "Pink Fire");
 	GameRegistry.registerBlock(Fire_Purple, "Purple Fire");
-	GameRegistry.registerBlock(OreAdamant, OreAdamant.getUnlocalizedName().substring(5));
+	GameRegistry.registerBlock(OreAdamant, "Adamant Ore");
+	GameRegistry.registerBlock(OreNature, "Nature Ore");
+	GameRegistry.registerBlock(OreEmber, "Ember Ore");
+	GameRegistry.registerBlock(OreAeir, "Aeir Ore");
+	GameRegistry.registerBlock(OreHydor, "Hydor Ore");
+	GameRegistry.registerBlock(OreMithril, "Mithril Ore");
+	GameRegistry.registerBlock(OreSilver, "Silver Ore");
 }
 }
